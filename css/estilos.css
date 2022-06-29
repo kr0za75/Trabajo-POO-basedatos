@@ -1,0 +1,395 @@
+#body{
+    background-image: url("../img/kazuha.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+#botonlogin{
+    background-color: rgba(255,0,0,1);
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 10px ;
+    text-decoration: none;
+    margin: 4px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 150px;
+    text-align:center;
+    font-family: 'fuente';
+
+}
+#botonreg{
+    font-family: 'fuente';
+    background-color: rgba(255,255,255,1);
+    border: none;
+    color: black-;
+    padding: 10px ;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    width: 140px;
+    text-align:center;
+
+}
+#botoncerrar{
+    background-color: rgba(255,255,255,1);
+    font-size: 15px;
+    color: black;
+    border: none;
+    padding-bottom: 10px ;
+    text-decoration: none;
+    margin: 4px;
+    margin-top: 7px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 140px;
+    text-align:center;
+    font-family: 'fuente';
+
+
+}
+#navbar{
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+@font-face {
+    font-family: 'fuente';
+    src: url('../fonts/Valorant Font.ttf');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'fuentec';
+    src: url('../fonts/Wonderbar.otf');
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'fuented';
+    src: url('../fonts/pricedown.otf');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+@font-face {
+    font-family: 'fuenteb';
+    src: url('../fonts/Gameshow.ttf');
+    font-style: normal;
+    font-weight: normal;
+  }
+  #letranav{
+    font-family: fuente;
+    font-size: 20px;
+    color: white;
+}
+#logo{
+    background-image: url("../img/logo.png");
+    font-family: 'fuenteb';
+    font-size: 50px;
+    color: white;
+}
+#modal{
+    font-family: 'fuente';
+    font-size: 40px;
+    color: white;
+    margin-left: 105px;
+}
+#fondomodal{
+    background-color: rgba(0,0,0,0.7);
+}
+#formulario{
+    font-family: 'fuente';
+    font-size: 20px;
+    color: white;
+}
+#blanco{
+    background-color: white;
+}
+#input{
+    border-color: white;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+#modallogin{
+    font-family: 'fuente';
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 3px;
+}
+#botoncerrarmodal{
+    background-color: rgba(255,255,255,1);
+    font-size: 12px;
+    color: black;
+    border: none;
+    padding: 10px ;
+    text-decoration: none;
+    margin: 4px;
+    margin-top: 7px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 110px;
+    text-align:center;
+    font-family: 'fuente';
+}
+    #opacidad{
+        background-color: rgba(0,0,0,0.5);
+
+
+}
+#botonloginmodal{
+    background-color: rgba(255,0,0,1);
+    font-size: 12px;
+    color: white;
+    border: none;
+    padding: 10px ;
+    text-decoration: none;
+    margin: 4px;
+    margin-top: 7px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 115px;
+    text-align:center;
+    font-family: 'fuente';
+
+}
+  .input-field {
+    position: relative;
+    width: 200px;
+    height: 44px;
+    line-height: 44px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    transition: 0.2s all;
+    cursor: text;
+    font-family: 'fuente';
+    font-size:15px;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: white;
+    background-color: rgba(0,0,0,0.5)
+  }
+  input:invalid {
+    outline: 0;
+    // color: #ff2300;
+    //   border-color: #ff2300;
+  }
+  input:focus,
+  input:valid {
+    border-color: rgba(255,0,0,1);
+  }
+  input:focus~label,
+  input:valid~label {
+      font-family: 'fuente';
+    font-size: 20px;
+    top: -24px;
+    color: #ffffff;
+
+  }
+
+
+#idjogo{
+    font-family: 'fuente';
+    color: WHITE;
+    font-size: 30px;
+}
+#idjogotitle{
+    font-family: 'fuente';
+    color: WHITE;
+    font-size: 30px;
+    margin-top:70px;
+    margin-left: 200px;
+
+}
+#idjogo2{
+    font-family: 'fuentec';
+    color: WHITE;
+    font-size: 17px;
+}
+#botoncerrar{
+    background-color: rgba(255,255,255,1);
+}
+#modallogintit{
+    font-family: 'fuented';
+    font-size: 35px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 3px;
+}
+#idjogoescoge{
+    font-family: 'fuentec';
+    color: WHITE;
+    font-size: 15px;
+}
+#radio{
+    margin-left: 65px;
+}
+#margin{
+  margin-top: 450px;
+  margin-left: 30px;
+  font-family: 'fuente';
+  color: WHITE;
+  font-size: 20px;
+}
+#select{
+  font-family: 'fuented';
+  font-size: 25px;
+  margin-top: 45px;
+      border-color: white;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+}
+#marginabajo{
+  margin-top: 620px;
+  margin-left: 30px;
+  font-family: 'fuente';
+  color: WHITE;
+  font-size: 20px;
+}
+#selectderecha{
+  font-family: 'fuented';
+  font-size: 25px;
+  margin-top: 10px;
+      border-color: white;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+}
+#marginderecha{
+  margin-top: 250PX;
+  margin-left: 870PX;
+  font-family: 'fuente';
+  color: WHITE;
+  font-size: 20px;
+}
+#marginpericia{
+  margin-top: 370px;
+  margin-left: 870px;
+  font-family: 'fuente';
+  color: WHITE;
+  font-size: 20px;
+}
+#izquierda{
+margin-right: 500px;
+}
+#textonegro{
+  background-color: rgba(0,0,0,0.8);
+  font-size: 20px;
+color: rgba(255,255,255,1);
+}
+#radiopericia{
+    margin-left: 25px;
+}
+#marginderechapref{
+  margin-top: 435px;
+  margin-left: 0px;
+  font-family: 'fuente';
+  color: WHITE;
+  font-size: 30px;
+}
+#selectderechapref{
+  font-family: 'fuented';
+  font-size: 25px;
+  margin-top: 237px;
+      border-color: white;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+}
+#marginderecha2{
+  margin-top: 115px;
+  margin-left: 875px;
+  font-family: 'fuente';
+  color: white;
+  font-size: 20px;
+}
+#marginderecha3{
+  margin-top: 45px;
+  margin-left: 845px;
+  font-family: 'fuente';
+  color: white;
+  font-size: 40px;
+}
+#selectpref{
+  font-family: 'fuented';
+  font-size: 25px;
+  margin-right: 255px;
+  margin-top: 65px;
+      border-color: white;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+}
+#terminos{
+  font-family: 'arial';
+  color: WHITE;
+  font-size: 15px;
+}
+#flexCheckChecked{
+margin-left: 24px;
+}
+#error{
+color: red;
+font-size: 20px;
+margin-top: 37px;
+margin-left: 200px;
+}
+
+#categoria{
+  font-family: 'fuente';
+  color: white;
+  font-size: 20px;
+  margin-left: 350px;
+  margin-top: 450px;
+}
+#categoriainput{
+  font-family: 'fuented';
+  font-size: 25px;
+  margin-top: 400px;
+      border-color: white;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+    }
+    #bienvenido{
+      font-family: 'fuenteb';
+      color: white;
+      font-size: 50px;
+      background-color: rgba(115,194,0,0.5);
+    }
+    #realizado{
+      font-family: 'fuenteb';
+      color: white;
+      font-size: 100px;
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+    #basado{
+      font-family: 'fuenteb';
+      color: white;
+      font-size: 50px;
+      background-color: rgba(255,0,0,0.5);
+    }
