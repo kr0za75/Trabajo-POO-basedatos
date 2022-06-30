@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 class Conexion  //Se declara la clase Conexion
 {
   private $server, $usuario, $pass, $database;

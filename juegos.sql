@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2022 a las 21:47:37
+-- Tiempo de generación: 30-06-2022 a las 21:57:14
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -152,7 +152,7 @@ CREATE TABLE `juego` (
 --
 
 INSERT INTO `juego` (`id`, `juego_resultado`, `valor_juego`) VALUES
-(0, 'No compatible', '0.00'),
+(0, 'No compatible o no ha realizado formulario', '0.00'),
 (1, 'Command & Conquer™ Remastered Collection', '4.91'),
 (2, 'Dead Space™', '8.36'),
 (3, 'Dead Space™ 2', '11.81'),
@@ -394,13 +394,6 @@ CREATE TABLE `usuarios_eliminados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `usuarios_eliminados`
---
-
-INSERT INTO `usuarios_eliminados` (`id`, `correo`, `nombre`, `clave`, `apellido`, `rut`, `telefono`, `fecha`, `hora`) VALUES
-(18, 'lol', 'lol', 'lol', 'lol', 'lol', 'lol', '2022-06-30', '15:47:18');
-
---
 -- Índices para tablas volcadas
 --
 
@@ -494,13 +487,13 @@ ALTER TABLE `usuarios_eliminados`
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Restricciones para tablas volcadas
