@@ -2,6 +2,7 @@
 include_once('conexion.php');
 include_once('persona.php');
 include_once('jugador.php');
+error_reporting(0);
 session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" AND ISSET($_POST['enviar'])){ //Si se presiona el botón registar del modal añadir, se mandarán las variables y se registrarán acá
   echo "Guardar";
