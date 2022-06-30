@@ -25,7 +25,7 @@ if($filas>0){
   session_name("$rut");
   header("Refresh: 0; url=../index.php");
 }else{
-  echo "<script>alert('Su cuenta ha sido bloqueda');</script>";
+  echo "<script>alert('Su cuenta ha sido bloqueda o no existe');</script>";
   header("Refresh: 0; url=../home.php");
 }
 }else{
@@ -45,7 +45,7 @@ if($filas>0){
 }else{
   $update="UPDATE persona SET validador = '0' WHERE rut = '$rut'";
   $res=mysqli_query($a,$update);
-  echo "<script>alert('Su cuenta ha sido bloqueda');</script>";
+  echo "<script>alert('Su cuenta ha sido bloqueda o no existe');</script>";
   header("Refresh: 0; url=../home.php");
 }
 }

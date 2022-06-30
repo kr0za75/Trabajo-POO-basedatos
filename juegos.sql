@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2022 a las 22:49:43
+-- Tiempo de generación: 30-06-2022 a las 21:47:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -38,16 +38,16 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`id`, `categoria`, `valor_categoria`) VALUES
-(1, 'Accion', '1.00'),
-(2, 'Aventura', '2.00'),
-(3, 'Conduccion', '3.00'),
-(4, 'Deportes', '4.00'),
-(5, 'Estrategia', '5.00'),
-(6, 'Rol', '6.00'),
-(7, 'Puzzle', '7.00'),
-(8, 'Shooter', '8.00'),
-(9, 'Simulacion', '9.00'),
-(10, 'Vuelo', '10.00');
+(1, 'Accion', '1.01'),
+(2, 'Aventura', '2.02'),
+(3, 'Conduccion', '3.03'),
+(4, 'Deportes', '4.04'),
+(5, 'Estrategia', '5.05'),
+(6, 'Rol', '6.06'),
+(7, 'Puzzle', '7.07'),
+(8, 'Shooter', '8.08'),
+(9, 'Simulacion', '9.09'),
+(10, 'Vuelo', '10.10');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ INSERT INTO `externos` (`id`, `experiencia`, `valor_externos`) VALUES
 (1, 'No tiene experiencia previa', '0.25'),
 (2, 'Tiene experiencia en Playstation', '0.45'),
 (3, 'Tiene experiencia en Xbox', '0.65'),
-(4, 'Tiene experiencia con PC gaming', '0.85');
+(4, 'Tiene experiencia con PC gaming', '0.90');
 
 -- --------------------------------------------------------
 
@@ -120,6 +120,24 @@ INSERT INTO `historial` (`id`, `historial`, `valor_historial`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `historico_usuarios`
+--
+
+CREATE TABLE `historico_usuarios` (
+  `id` int(11) NOT NULL,
+  `correo_hist` varchar(20) DEFAULT NULL,
+  `nombre_hist` varchar(35) DEFAULT NULL,
+  `clave_hist` varchar(35) DEFAULT NULL,
+  `apellido_hist` varchar(35) DEFAULT NULL,
+  `rut_hist` varchar(17) DEFAULT NULL,
+  `telefono_hist` varchar(15) DEFAULT NULL,
+  `fecha_hist` date DEFAULT NULL,
+  `hora_hist` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `juego`
 --
 
@@ -134,86 +152,93 @@ CREATE TABLE `juego` (
 --
 
 INSERT INTO `juego` (`id`, `juego_resultado`, `valor_juego`) VALUES
-(0, '', '0.00'),
-(1, 'Command & Conquer TM Remastered Collection', '4.90'),
-(2, 'Dead Space TM', '8.35'),
-(3, 'Dead Space TM 2', '11.80'),
-(4, 'Dead Space TM 3', '15.25'),
-(5, 'Dungeon Keeper TM', '17.90'),
-(6, 'Dungeon Keeper TM 2', '10.85'),
-(7, 'Mirror\'s Edge (2009)', '14.30'),
-(8, 'Mirror\'s Edge TM Catalyst', '17.75'),
-(9, 'Rocket Arena', '20.40'),
-(10, 'Syndicate TM (1993)', '16.80'),
-(11, 'A Way Out', '8.60'),
-(12, 'Alice: Madness Returns TM', '11.25'),
-(13, 'Fe', '14.70'),
-(14, 'It Takes Two', '18.15'),
-(15, 'Jade Empire TM: Edicion Especial', '11.10'),
-(16, 'Lost in Random TM', '13.75'),
-(17, 'Mirror\'s Edge TM Catalyst', '17.20'),
-(18, 'Rebel Galaxy', '20.65'),
-(19, 'Sea of Solitude', '24.10'),
-(20, 'The Saboteur TM', '16.25'),
-(21, 'STAR WARS Jedi: Fallen Order TM', '19.70'),
-(22, 'Burnout TM Paradise Remastered', '11.50'),
-(23, 'Need for Speed TM', '14.95'),
-(24, 'Need for Speed TM Heat', '17.60'),
-(25, 'Need for Speed TM Hot Pursuit Remastered', '10.55'),
-(26, 'Need for Speed TM Most Wanted', '14.00'),
-(27, 'Need for Speed TM Payback', '17.45'),
-(28, 'Need for Speed TM Rivals', '20.10'),
-(29, 'FIFA 20', '24.55'),
-(30, 'FIFA 21', '17.50'),
-(31, 'Knockout City TM', '20.95'),
-(32, 'Madden NFL 21', '23.60'),
-(33, 'Madden NFL 22', '14.40'),
-(34, 'Super Mega Baseball 3', '17.85'),
-(35, 'Command & Conquer TM Remastered Collection', '11.80'),
-(36, 'Plantas contra Zombis TM edicion juego del año', '17.90'),
-(38, 'Populous TM', '16.95'),
-(39, 'Populous TM II: Trials of the Olympian Gods', '20.40'),
-(40, 'SPORE TM', '23.85'),
-(41, 'Anthem TM', '28.30'),
-(42, 'Dragon Age TM II', '18.30'),
-(43, 'Dragon Age TM: Inquisition', '11.25'),
-(44, 'Dragon Age TM: Origins', '14.70'),
-(45, 'HIVESWAP: Act 1', '18.15'),
-(46, 'Jade Empire TM: Edicion Especial', '20.80'),
-(47, 'The Bard’s Tale Trilogy', '24.25'),
-(48, 'Ultima TM Underworld 1', '17.20'),
-(49, 'Ultima TM Underworld 2', '20.65'),
-(50, 'Peggle ', '24.30'),
-(51, 'Peggle  Nights', '27.75'),
-(52, 'Unravel TM', '31.20'),
-(53, 'Unravel Two', '11.50'),
-(54, 'Battlefield TM 1', '15.15'),
-(55, 'Battlefield 3 TM', '18.60'),
-(56, 'Battlefield 4 TM', '22.05'),
-(57, 'Battlefield: Bad Company TM 2', '25.50'),
-(58, 'Battlefield TM Hardline', '17.65'),
-(59, 'Battlefield TM V', '21.10'),
-(60, 'Crysis  (2007)', '24.55'),
-(61, 'Crysis  2 Maximum Edition', '28.00'),
-(62, 'Crysis  3', '30.65'),
-(63, 'Crysis Remastered', '23.60'),
-(64, 'Mass Effect TM (2007)', '14.40'),
-(65, 'Mass Effect TM 2 (2010)', '17.85'),
-(66, 'Mass Effect TM 3 (2012)', '20.50'),
-(67, 'Mass Effect TM: Andromeda', '23.95'),
-(68, 'Mass Effect TM Legendary Edition', '16.90'),
-(69, 'Plants vs. Zombies TM: La Batalla de Neighborville', '20.35'),
-(70, 'Plants vs. Zombies TM Garden Warfare', '23.00'),
-(71, 'STAR WARS TM Battlefront TM II', '29.90'),
-(72, 'STAR WARS TM Battlefront TM Ultimate Edition', '22.85'),
-(73, 'Titanfall TM 2', '16.30'),
-(74, 'SimCity TM', '20.75'),
-(75, 'SimCity 2000 TM Special Edition', '24.20'),
-(76, 'SimCity TM 4 Deluxe Edition', '16.35'),
-(77, 'SPORE TM', '19.80'),
-(78, 'STAR WARS TM: Squadrons', '23.25'),
-(79, 'Los Sims TM 4', '26.70'),
-(80, 'Medal of Honor Airborne TM', '30.35');
+(0, 'No compatible', '0.00'),
+(1, 'Command & Conquer™ Remastered Collection', '4.91'),
+(2, 'Dead Space™', '8.36'),
+(3, 'Dead Space™ 2', '11.81'),
+(4, 'Dead Space™ 3', '15.31'),
+(5, 'Dungeon Keeper™', '17.91'),
+(6, 'Dungeon Keeper™ 2', '10.86'),
+(7, 'Mirror\'s Edge (2009)', '14.31'),
+(8, 'Mirror\'s Edge™ Catalyst', '17.81'),
+(9, 'Rocket Arena', '20.41'),
+(10, 'STAR WARS™: Squadrons', '23.86'),
+(11, 'Syndicate™ (1993)', '16.81'),
+(12, 'A Way Out', '8.67'),
+(13, 'Alice: Madness Returns™', '11.27'),
+(14, 'Fe', '14.72'),
+(15, 'It Takes Two', '18.17'),
+(16, 'Jade Empire™: Edición Especial', '11.17'),
+(17, 'Lost in Random™', '13.77'),
+(18, 'Watch Dogs', '17.22'),
+(19, 'Rebel Galaxy', '20.67'),
+(20, 'Sea of Solitude', '24.17'),
+(21, 'The Saboteur™', '16.27'),
+(22, 'STAR WARS Jedi: Fallen Order™', '19.72'),
+(23, 'Burnout™ Paradise Remastered', '11.53'),
+(24, 'Need for Speed™', '15.03'),
+(25, 'Need for Speed™ Heat', '17.63'),
+(26, 'Need for Speed™ Hot Pursuit Remastered', '10.58'),
+(27, 'Need for Speed™ Most Wanted', '14.03'),
+(28, 'Need for Speed™ Payback', '17.53'),
+(29, 'Need for Speed™ Rivals', '20.13'),
+(30, 'FIFA 20', '24.59'),
+(31, 'FIFA 21', '17.54'),
+(32, 'Knockout City™', '21.04'),
+(33, 'Madden NFL 21', '23.64'),
+(34, 'Madden NFL 22', '14.44'),
+(35, 'Super Mega Baseball 3', '17.89'),
+(36, 'X-COM 2', '11.90'),
+(37, 'Gears of War', '14.50'),
+(38, 'Plantas contra Zombis™ edición juego del año', '17.95'),
+(39, 'Plants vs. Zombies™ Garden Warfare', '21.40'),
+(40, 'Plants vs. Zombies™ Garden Warfare 2: Edición Estándar', '24.90'),
+(41, 'Populous™', '17.00'),
+(42, 'Populous™ II: Trials of the Olympian Gods', '20.45'),
+(43, 'SPORE™', '23.90'),
+(44, 'Anthem™', '28.41'),
+(45, 'Dragon Age™ II', '18.36'),
+(46, 'Dragon Age™: Inquisition', '11.31'),
+(47, 'Dragon Age™: Origins', '14.76'),
+(48, 'HIVESWAP: Act 1', '18.26'),
+(49, 'World of Warcraft', '20.86'),
+(50, 'The Bard’s Tale Trilogy', '24.31'),
+(51, 'Ultima™ Underworld 1', '17.26'),
+(52, 'Ultima™ Underworld 2', '20.76'),
+(53, 'Peggle®', '24.37'),
+(54, 'Peggle® Nights', '27.82'),
+(55, 'Unravel™', '31.27'),
+(56, 'Unravel Two', '11.62'),
+(57, 'Battlefield™ 1', '15.23'),
+(58, 'Battlefield 3™', '18.68'),
+(59, 'Battlefield 4™', '22.13'),
+(60, 'Battlefield: Bad Company™ 2', '25.63'),
+(61, 'Battlefield™ Hardline', '17.73'),
+(62, 'Battlefield™ V', '21.18'),
+(63, 'Crysis® (2007)', '24.63'),
+(64, 'Crysis® 2 Maximum Edition', '28.13'),
+(65, 'Crysis® 3', '30.73'),
+(66, 'Crysis Remastered', '23.68'),
+(67, 'Mass Effect™ (2007)', '14.48'),
+(68, 'Mass Effect™ 2 (2010)', '17.98'),
+(69, 'Mass Effect™ 3 (2012)', '20.58'),
+(70, 'Mass Effect™: Andromeda', '24.03'),
+(71, 'Mass Effect™ Legendary Edition', '16.98'),
+(72, 'Plants vs. Zombies™: La Batalla de Neighborville', '20.48'),
+(73, 'Call of Duty: Advance Warfare', '23.08'),
+(74, 'Counter Strike: Global Offensive', '26.53'),
+(75, 'STAR WARS™ Battlefront™ II', '29.98'),
+(76, 'STAR WARS™ Battlefront™ Ultimate Edition', '22.98'),
+(77, 'Escape From Tarkov', '25.58'),
+(78, 'Titanfall™ 2', '16.38'),
+(79, 'SimCity™', '20.84'),
+(80, 'SimCity 2000™ Special Edition', '24.34'),
+(81, 'SimCity™ 4 Deluxe Edition', '16.44'),
+(82, 'SUPER HOT', '19.89'),
+(83, 'Apex Legends', '23.34'),
+(84, 'Los Sims™ 4', '26.84'),
+(85, 'Medal of Honor Airborne™', '30.45'),
+(86, 'Warhawk', '29.40');
 
 -- --------------------------------------------------------
 
@@ -280,6 +305,24 @@ CREATE TABLE `persona` (
   `validador` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Disparadores `persona`
+--
+DELIMITER $$
+CREATE TRIGGER `crearPersona` AFTER INSERT ON `persona` FOR EACH ROW BEGIN
+    INSERT INTO historico_usuarios(id,correo_hist,nombre_hist,clave_hist,apellido_hist,rut_hist,telefono_hist,fecha_hist,hora_hist) 
+    VALUES(new.id,new.correo,new.nombre,new.clave,new.apellido,new.rut,new.telefono,curdate(),curtime());
+    END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `eliminarJugador` BEFORE DELETE ON `persona` FOR EACH ROW BEGIN
+    INSERT INTO usuarios_eliminados (id,nombre,correo,clave,apellido,rut,telefono,fecha,hora) 
+    VALUES(old.id,old.nombre,old.correo,old.clave,old.apellido,old.rut,old.telefono,curdate(),curtime());
+    END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -339,13 +382,23 @@ INSERT INTO `tipo_jugador` (`id`, `tipo_jugador`, `valor_tipo`) VALUES
 --
 
 CREATE TABLE `usuarios_eliminados` (
-  `rut_elim` varchar(17) NOT NULL,
-  `nombre_elim` varchar(20) DEFAULT NULL,
-  `apellido_elim` varchar(20) DEFAULT NULL,
-  `correo_elim` varchar(35) DEFAULT NULL,
-  `telefono_elim` varchar(20) DEFAULT NULL,
-  `clave_elim` varchar(20) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `clave` varchar(30) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `rut` varchar(20) NOT NULL,
+  `telefono` varchar(30) NOT NULL,
+  `fecha` date DEFAULT NULL,
+  `hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios_eliminados`
+--
+
+INSERT INTO `usuarios_eliminados` (`id`, `correo`, `nombre`, `clave`, `apellido`, `rut`, `telefono`, `fecha`, `hora`) VALUES
+(18, 'lol', 'lol', 'lol', 'lol', 'lol', 'lol', '2022-06-30', '15:47:18');
 
 --
 -- Índices para tablas volcadas
@@ -373,6 +426,12 @@ ALTER TABLE `externos`
 -- Indices de la tabla `historial`
 --
 ALTER TABLE `historial`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `historico_usuarios`
+--
+ALTER TABLE `historico_usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -425,7 +484,7 @@ ALTER TABLE `tipo_jugador`
 -- Indices de la tabla `usuarios_eliminados`
 --
 ALTER TABLE `usuarios_eliminados`
-  ADD PRIMARY KEY (`rut_elim`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -435,13 +494,13 @@ ALTER TABLE `usuarios_eliminados`
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
