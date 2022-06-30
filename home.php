@@ -128,7 +128,7 @@ background-color: red;
       <div class="form-check">
 <input class="form-check-input" type="checkbox" value="terminos" id="terminos" required>
 <p class="form-check-label" for="terminos" id="terminos">
-Deseo aceptar los términos y condiciones
+Deseo aceptar los <a href="terminos.php" target="_blank">términos y condiciones</a>
 </p>
     </div>
 
