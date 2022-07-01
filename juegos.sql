@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-07-2022 a las 07:30:48
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 01-07-2022 a las 16:40:49
+-- Versión del servidor: 10.1.31-MariaDB
+-- Versión de PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -135,6 +136,22 @@ CREATE TABLE `historico_usuarios` (
   `hora_hist` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `historico_usuarios`
+--
+
+INSERT INTO `historico_usuarios` (`id`, `correo_hist`, `nombre_hist`, `clave_hist`, `apellido_hist`, `rut_hist`, `telefono_hist`, `fecha_hist`, `hora_hist`) VALUES
+(34, 'jonvidal@cftla.cl', 'jonathan', 'sk3ui6qi', 'vidal', '21264903-1', '127', '2022-07-01', '09:50:14'),
+(35, 'cguerra@cftla.cl', 'Claudio', '1234', 'Guerra', '21131735-3', '127', '2022-07-01', '10:09:22'),
+(36, 'eduparedes@cftla.cl', 'Eduardo', '12345', 'Paredes', '20515107-9', '127', '2022-07-01', '10:11:16'),
+(37, 'bryjara@cftla.cl', 'Bryan', '123456', 'Jara', '20961576-2', '127', '2022-07-01', '10:12:20'),
+(38, 'mmont@cftla.cl', 'Bersabeth', 'asd', 'Montalba', '20125111-7', '127', '2022-07-01', '10:19:46'),
+(39, 'katesalas@cftla.cl', 'Katerina', '123456', 'Paredes', '17969513-8', '127', '2022-07-01', '10:23:45'),
+(40, 'lucastillo', 'Lukas', 'asdfg', 'Castillo', '7583099-8', '127', '2022-07-01', '10:26:08'),
+(41, 'asdf@cftla.cl', 'Eduardo', '12345', 'Baeza', '18606349-K', '127', '2022-07-01', '10:29:14'),
+(42, 'jijijaja@cftla.cl', 'Eduardo', '123456', 'Perez', '10189140-2', '127', '2022-07-01', '10:31:12'),
+(43, 'pete@cftla.cl', 'Fernando', '12345667', 'Jara', '14212856-K', '127', '2022-07-01', '10:33:01');
+
 -- --------------------------------------------------------
 
 --
@@ -259,6 +276,17 @@ CREATE TABLE `jugador` (
   `categoria_id` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `jugador`
+--
+
+INSERT INTO `jugador` (`id_jugador`, `persona_id`, `externos_id`, `preferencia_id`, `pericia_id`, `juego_id`, `dedicacion_id`, `historial_id`, `tipo_jugador_id`, `categoria_id`) VALUES
+(24, 39, 2, 2, 3, 0, 2, 2, 2, 2),
+(25, 40, 2, 2, 2, 0, 2, 2, 2, 2),
+(26, 41, 1, 5, 5, 5, 5, 5, 5, 1),
+(27, 42, 2, 3, 3, 14, 4, 4, 4, 2),
+(28, 43, 3, 9, 9, 0, 5, 5, 5, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -304,6 +332,17 @@ CREATE TABLE `persona` (
   `telefono` tinyint(4) NOT NULL,
   `validador` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id`, `correo`, `nombre`, `clave`, `apellido`, `rut`, `telefono`, `validador`) VALUES
+(39, 'katesalas@cftla.cl', 'Katerina', '123456', 'Paredes', '17969513-8', 127, 4),
+(40, 'lucastillo', 'Lukas', 'asdfg', 'Castillo', '7583099-8', 127, 4),
+(41, 'asdf@cftla.cl', 'Eduardo', '12345', 'Baeza', '18606349-K', 127, 4),
+(42, 'jijijaja@cftla.cl', 'Eduardo', '123456', 'Perez', '10189140-2', 127, 4),
+(43, 'pete@cftla.cl', 'Fernando', '12345667', 'Jara', '14212856-K', 127, 4);
 
 --
 -- Disparadores `persona`
@@ -392,6 +431,17 @@ CREATE TABLE `usuarios_eliminados` (
   `fecha` date DEFAULT NULL,
   `hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios_eliminados`
+--
+
+INSERT INTO `usuarios_eliminados` (`id`, `correo`, `nombre`, `clave`, `apellido`, `rut`, `telefono`, `fecha`, `hora`) VALUES
+(34, 'jonvidal@cftla.cl', 'jonathan', 'sk3ui6qi', 'vidal', '21264903-1', 127, '2022-07-01', '10:22:16'),
+(35, 'cguerra@cftla.cl', 'Claudio', '1234', 'Guerra', '21131735-3', 127, '2022-07-01', '10:22:16'),
+(36, 'eduparedes@cftla.cl', 'Eduardo', '12345', 'Paredes', '20515107-9', 127, '2022-07-01', '10:22:16'),
+(37, 'bryjara@cftla.cl', 'Bryan', '123456', 'Jara', '20961576-2', 127, '2022-07-01', '10:22:16'),
+(38, 'mmont@cftla.cl', 'Bersabeth', 'asd', 'Montalba', '20125111-7', 127, '2022-07-01', '10:22:16');
 
 --
 -- Índices para tablas volcadas
@@ -488,13 +538,13 @@ ALTER TABLE `usuarios_eliminados`
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas
