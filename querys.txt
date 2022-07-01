@@ -1,0 +1,57 @@
+jugador.php
+
+"INSERT INTO jugador (id_jugador,persona_id,externos_id,preferencia_id,pericia_id,juego_id,dedicacion_id,historial_id,tipo_jugador_id,categoria_id) VALUES ('$this->id_jugador','$this->persona_id','$this->externos_id','$this->preferencia_id','$this->pericia_id','$this->juego_id','$this->dedicacion_id','$this->historial_id','$this->tipo_jugador_id','$this->categoria_id')"
+
+negocio.php
+
+"SELECT * FROM externos where id = '$externos_id'";  //Se obtiene el id del externo seleccionado en el modal añadir
+"SELECT * FROM preferencia where id = '$preferencia_id'";  //Se obtiene el id de la preferencia seleccionada en el modal añadir
+"SELECT * FROM pericia where id = '$pericia_id'";  //Se obtiene el id de la pericia seleccionada en el modal añadir
+"SELECT * FROM dedicacion where id = '$dedicacion_id'";    //Se obtiene el id de la dedicación seleccionada en el modal añadir
+"SELECT * FROM historial where id = '$historial_id'";  //Se obtiene el id del historial personal seleccionado en el modal añadir
+"SELECT * FROM tipo_jugador where id = '$tipo_jugador_id'";  //Se obtiene el id del tipo de jugador seleccionado en el modal añadir
+"SELECT * FROM categoria where id = '$categoria_id'";  //Se obtiene el id de la categoria seleccionada en el modal añadir
+"SELECT * FROM juego where valor_juego = '$suma_total'";
+
+persona.php
+
+$sql="INSERT INTO persona (id,correo,nombre,clave,apellido,rut,telefono,validador) VALUES ('$this->id','$this->correo','$this->nombre','$this->clave','$this->apellido','$this->rut','$this->telefono','$this->validador')";    //Se asigna valores a la tabla persona.
+
+
+valida.php
+
+"SELECT * FROM persona WHERE rut = '$rut' AND clave = '$clave'";  //Se crea la sentencia SQL para buscar al jugador en la base de datos
+$update="UPDATE persona SET validador = '4' WHERE rut = '$rut' AND clave = '$clave'"; //Se crea la sentencia SQL para actualizar el validador de la persona en la base de datos
+$select="SELECT * FROM persona WHERE rut = '$rut'"; //Se crea la sentencia SQL para buscar al jugador en la base de datos
+$update="UPDATE persona SET validador = '$validador' WHERE rut = '$rut'"; //Se crea la sentencia SQL para actualizar el validador de la persona en la base de datos
+$update="UPDATE persona SET validador = '0' WHERE rut = '$rut'";  //Se crea la sentencia SQL para actualizar el validador de la persona en la base de datos
+
+
+
+formulario.php
+
+"SELECT * FROM tipo_jugador where tipo_jugador = 'socializador'"; //Selecciona todos los registros de la tabla tipo_jugador para encontrar socializador
+"SELECT * FROM tipo_jugador where tipo_jugador = 'anarquista'";//Selecciona todos los registros de la tabla tipo_jugador para encontrar anarquista
+"SELECT * FROM tipo_jugador where tipo_jugador = 'conquistador'";//Selecciona todos los registros de la tabla tipo_jugador para encontrar conquistador
+"SELECT * FROM tipo_jugador where tipo_jugador = 'competidor'";//Selecciona todos los registros de la tabla tipo_jugador para encontrar competidor
+"SELECT * FROM tipo_jugador where tipo_jugador = 'explorador'";//Selecciona todos los registros de la tabla tipo_jugador para encontrar explorador
+
+"SELECT * FROM dedicacion";//Selecciona todos los registros de la tabla dedicacion
+"SELECT * FROM historial";//Selecciona todos los registros de la tabla historial
+"SELECT * FROM categoria";//Selecciona todos los registros de la tabla categoria
+"SELECT * FROM preferencia";//Selecciona todos los registros de la tabla preferencia
+"SELECT * FROM externos";//Selecciona todos los registros de la tabla externos
+"SELECT * FROM pericia where pericia = 'neofito'";//Selecciona todos los registros de la tabla pericia para encontrar el valor neofito
+"SELECT * FROM pericia where pericia = 'novato'";//Selecciona todos los registros de la tabla pericia para encontrar el valor novato
+"SELECT * FROM pericia where pericia = 'amateur'";//Selecciona todos los registros de la tabla pericia para encontrar el valor amateur
+"SELECT * FROM pericia where pericia = 'training'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor training
+"SELECT * FROM pericia where pericia = 'intermedio'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor intermedio
+ "SELECT * FROM pericia where pericia = 'rookie'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor rookie
+"SELECT * FROM pericia where pericia = 'senior'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor senior
+"SELECT * FROM pericia where pericia = 'semi-pro'";  //Selecciona todos los registros de la tabla pericia para encontrar el valor semi-pro
+"SELECT * FROM pericia where pericia = 'experto'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor expert
+"SELECT * FROM pericia where pericia = 'profesional'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor profesional
+"SELECT * FROM pericia where pericia = 'veterano'"; //Selecciona todos los registros de la tabla pericia para encontrar el valor veterano
+
+"SELECT * FROM jugador where persona_id = '$persona'"; //Se declara la query para seleccionar todos los registros de la tabla jugador.
+"SELECT * FROM juego where id = '$idjuego'"; //Se declara la query para seleccionar todos los registros de la tabla juego.
