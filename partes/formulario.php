@@ -245,7 +245,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the first slide.</p>
+          <p>Persona recién iniciada en los videojuegos</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -258,7 +258,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the second slide.</p>
+          <p>Persona con el mínimo de experiencia para jugar</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -271,7 +271,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Jugador que tiene el nivel promedio a los demás</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -284,7 +284,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Está en entrenamiento para mejorar</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -297,7 +297,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Maneja el videojuego con un grado alto de experiencia </p>
         </div>
       </div>
       <div class="carousel-item">
@@ -310,7 +310,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Tiene el nivel más alto que los demás, y aspira a mejorar</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -323,7 +323,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Capacitado y con mucha experiencia</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -336,7 +336,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Persona que está apunto de llegar al nivel profesional del videojuego</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -349,7 +349,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Maneja el videojuego de manera perfecta</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -362,7 +362,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Conoce el videojuego a la perfección y le dedica la mayor parte de su tiempo</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -375,7 +375,7 @@ while ($row=$res->fetch_assoc()){?>
 while ($row=$res->fetch_assoc()){?>
   <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
 <?php } ?>
-          <p>Some representative placeholder content for the third slide.</p>
+          <p>Tiene más de 3 años de experiencia jugando videojuegos y se sabe todos los trucos y ventajas</p>
         </div>
       </div>
     </div>
@@ -390,7 +390,7 @@ while ($row=$res->fetch_assoc()){?>
 
   </div>
             <div class="text-center">
-                <button class="btn btn-danger text-center" type="submit" name="enviar">ENVIAR ENCUESTA</button>
+                <button class="btn btn-outline-danger my-2 my-sm-0 btn-lg" type="submit" name="enviar">ENVIAR ENCUESTA</button>
             </div>
 
           </div>
