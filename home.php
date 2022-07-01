@@ -154,7 +154,7 @@ Deseo aceptar los <a href="terminos.php" target="_blank">términos y condiciones
 </div>
 <div class="modal-body">
   <div class="container">
-  <form class="" action="clases/valida.php" method="post">
+  <form class="" action="login/valida.php" method="post">
       <div class="text-center">
         <div class="row">
           <div class="col-md-1"></div>

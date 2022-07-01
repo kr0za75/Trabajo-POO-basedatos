@@ -1,5 +1,5 @@
 <?php
-include_once('conexion.php');
+include_once('../clases/conexion.php');
 $rut=$_POST['rutlog'];  //Se recibe el rut del jugador que quiere ingresar al sistema
 $clave=$_POST['clavelog'];  //Se recibe la clave del jugador que quiere ingresar al sistema
 $con = new Conexion('localhost','root','','juegos');  //Se crea una nueva conexión a la base de datos

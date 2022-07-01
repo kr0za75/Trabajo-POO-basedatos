@@ -15,8 +15,8 @@ class jugador extends Conexion {    //Se declara la clase historial
         $this->tipo_jugador_id=$tipo_jugador_id;
         $this->categoria_id=$categoria_id;
     }
-    function insertarJugador()
-    {
+    function insertarJugador()  
+    {   //Se declara la función insertarJugador
         $sql="INSERT INTO jugador (id_jugador,persona_id,externos_id,preferencia_id,pericia_id,juego_id,dedicacion_id,historial_id,tipo_jugador_id,categoria_id) VALUES ('$this->id_jugador','$this->persona_id','$this->externos_id','$this->preferencia_id','$this->pericia_id','$this->juego_id','$this->dedicacion_id','$this->historial_id','$this->tipo_jugador_id','$this->categoria_id')";
         $con = new Conexion('localhost','root','','juegos');
         $con->agregarJugador($sql);

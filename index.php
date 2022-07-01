@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Pescao Corporation</title>
 </head>
-<?php include('clases/mantenerlogeado.php');
+<?php include('login/mantenerlogeado.php');
 include ('conexion.php');?>
 <style>
 a {
@@ -47,7 +47,7 @@ background-color: red;
         </li>
       </ul>
       <?php
-          echo "<a href='clases/cerrar.php' class='btn btn-outline-danger my-2 my-sm-0' id='letranav'>Cerrar Sesion</a>";
+          echo "<a href='login/cerrar.php' class='btn btn-outline-danger my-2 my-sm-0' id='letranav'>Cerrar Sesion</a>";
         ?>
     </div>
   </div>

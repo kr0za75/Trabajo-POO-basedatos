@@ -1,8 +1,8 @@
 <?php
-include('clases/mantenerlogeado.php');
+include('login/mantenerlogeado.php');
 
 ?>
-          <style>
+          <style> 
 
         /* Setting container to flex and
            width to 80% of view port */
