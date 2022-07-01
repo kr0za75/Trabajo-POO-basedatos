@@ -104,7 +104,44 @@ background-color: red;
              <label for="clave">Clave:</label><br>
             </div><br><br>
             <div class="input-field">
-            <input type="text" name="rut" id="rut" required />
+            <input type="text" class="text" id="rut" name="rut" value="" oninput="checkRut(this)" required>
+<script type="text/javascript">
+function checkRut(rut) {
+      // Despejar Puntos
+      var valor = rut.value.replace('.','');
+      // Despejar Gui�n
+      valor = valor.replace('-','');
+      // Aislar Cuerpo y D�gito Verificador
+      cuerpo = valor.slice(0,-1);
+      dv = valor.slice(-1).toUpperCase();
+      // Formatear RUN
+      rut.value = cuerpo + '-'+ dv
+      // Si no cumple con el m�nimo ej. (n.nnn.nnn)
+      if(cuerpo.length < 7) { rut.setCustomValidity("RUT Incompleto"); return false;}
+      // Calcular D�gito Verificador
+      suma = 0;
+      multiplo = 2;
+      // Para cada d�gito del Cuerpo
+      for(i=1;i<=cuerpo.length;i++) {
+          // Obtener su Producto con el M�ltiplo Correspondiente
+          index = multiplo * valor.charAt(cuerpo.length - i);
+          // Sumar al Contador General
+          suma = suma + index;
+          // Consolidar M�ltiplo dentro del rango [2,7]
+          if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+      }
+
+      // Calcular D�gito Verificador en base al M�dulo 11
+      dvEsperado = 11 - (suma % 11);
+      // Casos Especiales (0 y K)
+      dv = (dv == 'K')?10:dv;
+      dv = (dv == 0)?11:dv;
+      // Validar que el Cuerpo coincide con su D�gito Verificador
+      if(dvEsperado != dv) { rut.setCustomValidity("RUT Invalido"); return false; }
+      // Si todo sale bien, eliminar errores (decretar que es v�lido)
+      rut.setCustomValidity('');
+  }
+</script>
              <label for="rut">Rut:</label><br>
             </div><br><br>
            </div>
@@ -118,7 +155,7 @@ background-color: red;
              <label for="apellido">Apellido:</label><br>
             </div><br><br>
             <div class="input-field">
-            <input type="text" name="telefono" id="tel" required />
+            <input type="number" name="telefono" id="tel" required />
              <label for="tel">Telefono:</label><br>
             </div><br><br>
           </div>
@@ -160,7 +197,44 @@ Deseo aceptar los <a href="terminos.php" target="_blank">términos y condiciones
           <div class="col-md-1"></div>
           <div class="col-md-7">
             <div class="input-field">
-            <input type="text" name="rutlog" id="rutlogin" required>
+            <input type="text" class="text" id="rutlogin" name="rutlog" value="" oninput="checkRut(this)" required>
+<script type="text/javascript">
+function checkRut(rut) {
+      // Despejar Puntos
+      var valor = rut.value.replace('.','');
+      // Despejar Gui�n
+      valor = valor.replace('-','');
+      // Aislar Cuerpo y D�gito Verificador
+      cuerpo = valor.slice(0,-1);
+      dv = valor.slice(-1).toUpperCase();
+      // Formatear RUN
+      rut.value = cuerpo + '-'+ dv
+      // Si no cumple con el m�nimo ej. (n.nnn.nnn)
+      if(cuerpo.length < 7) { rut.setCustomValidity("RUT Incompleto"); return false;}
+      // Calcular D�gito Verificador
+      suma = 0;
+      multiplo = 2;
+      // Para cada d�gito del Cuerpo
+      for(i=1;i<=cuerpo.length;i++) {
+          // Obtener su Producto con el M�ltiplo Correspondiente
+          index = multiplo * valor.charAt(cuerpo.length - i);
+          // Sumar al Contador General
+          suma = suma + index;
+          // Consolidar M�ltiplo dentro del rango [2,7]
+          if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+      }
+
+      // Calcular D�gito Verificador en base al M�dulo 11
+      dvEsperado = 11 - (suma % 11);
+      // Casos Especiales (0 y K)
+      dv = (dv == 'K')?10:dv;
+      dv = (dv == 0)?11:dv;
+      // Validar que el Cuerpo coincide con su D�gito Verificador
+      if(dvEsperado != dv) { rut.setCustomValidity("RUT Invalido"); return false; }
+      // Si todo sale bien, eliminar errores (decretar que es v�lido)
+      rut.setCustomValidity('');
+  }
+</script>
              <label for="rutlogin">     Rut:</label><br>
             </div><br><br>
             <div class="input-field">

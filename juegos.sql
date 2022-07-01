@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2022 a las 21:57:14
+-- Tiempo de generación: 01-07-2022 a las 07:30:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -126,10 +126,10 @@ INSERT INTO `historial` (`id`, `historial`, `valor_historial`) VALUES
 CREATE TABLE `historico_usuarios` (
   `id` int(11) NOT NULL,
   `correo_hist` varchar(20) DEFAULT NULL,
-  `nombre_hist` varchar(35) DEFAULT NULL,
-  `clave_hist` varchar(35) DEFAULT NULL,
-  `apellido_hist` varchar(35) DEFAULT NULL,
-  `rut_hist` varchar(17) DEFAULT NULL,
+  `nombre_hist` varchar(25) DEFAULT NULL,
+  `clave_hist` varchar(30) DEFAULT NULL,
+  `apellido_hist` varchar(25) DEFAULT NULL,
+  `rut_hist` varchar(12) DEFAULT NULL,
   `telefono_hist` varchar(15) DEFAULT NULL,
   `fecha_hist` date DEFAULT NULL,
   `hora_hist` time DEFAULT NULL
@@ -297,11 +297,11 @@ INSERT INTO `pericia` (`id`, `pericia`, `valor_pericia`) VALUES
 CREATE TABLE `persona` (
   `id` int(11) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
   `clave` varchar(30) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
-  `rut` varchar(20) NOT NULL,
-  `telefono` varchar(30) NOT NULL,
+  `apellido` varchar(25) NOT NULL,
+  `rut` varchar(12) NOT NULL,
+  `telefono` tinyint(4) NOT NULL,
   `validador` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -384,11 +384,11 @@ INSERT INTO `tipo_jugador` (`id`, `tipo_jugador`, `valor_tipo`) VALUES
 CREATE TABLE `usuarios_eliminados` (
   `id` int(11) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
   `clave` varchar(30) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
-  `rut` varchar(20) NOT NULL,
-  `telefono` varchar(30) NOT NULL,
+  `apellido` varchar(25) NOT NULL,
+  `rut` varchar(12) NOT NULL,
+  `telefono` tinyint(30) NOT NULL,
   `fecha` date DEFAULT NULL,
   `hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -459,7 +459,8 @@ ALTER TABLE `pericia`
 --
 ALTER TABLE `persona`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `rut` (`rut`);
+  ADD UNIQUE KEY `rut` (`rut`),
+  ADD UNIQUE KEY `rut_2` (`rut`);
 
 --
 -- Indices de la tabla `preferencia`
@@ -487,13 +488,13 @@ ALTER TABLE `usuarios_eliminados`
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Restricciones para tablas volcadas

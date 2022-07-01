@@ -243,7 +243,7 @@ while ($row=$res->fetch_assoc()){?>
   $neofito = "SELECT * FROM pericia where pericia = 'neofito'";
   $res = $con->query($neofito);
 while ($row=$res->fetch_assoc()){?>
-  <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>">
+  <input class="form-check-input" type="radio" name="pericia" id="radio" value="<?php echo $row['id']?>" checked>
 <?php } ?>
           <p>Persona recién iniciada en los videojuegos</p>
         </div>
